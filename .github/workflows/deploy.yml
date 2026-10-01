@@ -32,6 +32,10 @@ jobs:
         working-directory: src/frontend
         run: npm install
 
+      - name: Fix executable permissions
+        working-directory: src/frontend
+        run: chmod +x node_modules/.bin/vite
+
       - name: Build
         working-directory: src/frontend
         run: npm run build
