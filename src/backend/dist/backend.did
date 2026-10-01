@@ -1,0 +1,14 @@
+type Time = int;
+type Inquiry = 
+ record {
+   location: text;
+   name: text;
+   phone: text;
+   serviceRequired: text;
+   timestamp: Time;
+ };
+service : {
+  getAllInquiries: () -> (vec Inquiry) query;
+  submitInquiry: (name: text, phone: text, location: text, serviceRequired:
+   text) -> ();
+}

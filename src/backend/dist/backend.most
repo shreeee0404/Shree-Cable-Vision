@@ -1,0 +1,23 @@
+// Version: 1.0.0
+type Inquiry__931573009 =
+  {
+    location : Text;
+    name : Text;
+    phone : Text;
+    serviceRequired : Text;
+    timestamp : Time__900049286
+  };
+type Int__270357528 = Int__616954475;
+type Int__616954475 = Int;
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Time__796480547 = Int__270357528;
+type Time__900049286 = Time__796480547;
+actor {
+  stable inquiries :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Inquiry__931573009]];
+      var elementIndex : Nat__490723111
+    }
+};
