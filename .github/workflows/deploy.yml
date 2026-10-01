@@ -28,9 +28,14 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       - name: Install dependencies
         working-directory: src/frontend
-        run: npm install
+        run: pnpm install
 
       - name: Fix executable permissions
         working-directory: src/frontend
@@ -38,7 +43,7 @@ jobs:
 
       - name: Build
         working-directory: src/frontend
-        run: npm run build
+        run: pnpm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
